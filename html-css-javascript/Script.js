@@ -16,11 +16,16 @@ var isRad = true;
 
 
 var groceries = ['Milk','Eggs','Cheese'];
-
-for(i=0; i< groceries.length;i++){
+function listGroceries(){
+    for(i=0; i< groceries.length;i++){
     console.log(groceries[i]);
-    
 }
+}
+listGroceries();
+
+document.getElementById('bt').addEventListener('click',function(){
+    alert('successfully submitted')
+}); 
 
 
 
