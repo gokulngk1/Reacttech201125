@@ -29,20 +29,62 @@ var isRad = true;
 
 // Promise
 
+
+// function getUsers(){
+//     return[
+//         {username: 'john', email:'john@test.com'},
+//         {username: 'jane', email:'jane@test.com'},
+//     ]
+// }
+
+// function findUser(username){
+//     const users = getUsers();
+//     const user = users.find((user)=> user.username === username);
+//     return user;
+// }
+
+// console.log(findUser('john'));
+
+
+// ---------------------------
+
+
+// function getUsers(){
+//     let users = [];
+
+//     setTimeout(()=>{
+//     users = [
+//         {username: 'john', email:'john@test.com'},
+//         {username: 'jane', email:'jane@test.com'},
+//     ];
+// },1000);
+//     return users;
+// }
+
+// function findUser(username){
+//     const users = getUsers();
+//     const user = users.find((user)=> user.username === username);
+//     return user;
+// }
+
+// console.log(findUser('john'));
+
+
 function getUsers(){
-    return[
-        {username: 'john', email:'john@test.com'},
-        {username: 'jane', email:'jane@test.com'},
-    ]
+    return new promise((resolve, reject) => {
+        let users = [];
+        setTimeout(()=>{
+          users = [
+           {username: 'john', email:'john@test.com'},
+           {username: 'jane', email:'jane@test.com'},
+         ];
+    },1000);
+    return users;
+})
 }
 
-function findUser(username){
-    const users = getUsers();
-    const user = users.find((user)=> user.username === username);
-    return user;
-}
-
-console.log(findUser('john'));
+const promise = getUsers();
+console.log(promise)
 
 
 
