@@ -15,5 +15,11 @@ center{
     width: 100px;
     height: 100px;
     background: red;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid rgb(22, 28, 196);
+    float: left;
+    position:relative;
+    
 
 }
